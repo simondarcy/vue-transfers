@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <PageHeader title="Search for airport transfers"/>
+    <SearchForm/>
+    <router-link class="manage-link text-muted d-md-none" to="/manage">Manage Booking</router-link>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PageHeader from '@/components/PageHeader.vue'
+import SearchForm from '@/components/SearchForm.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    PageHeader,
+    SearchForm
+  },
+  mounted () {
+  document.body.classList.add('home')
   }
 }
 </script>
+
+<style scoped>
+.manage-link{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: .7rem;
+  text-align: center;
+}
+</style>
+
+

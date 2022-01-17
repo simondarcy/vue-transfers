@@ -1,4 +1,15 @@
-# transfers
+# Vue Transfers
+
+A web app for booking airport transfers.
+
+Live demo [here](https://transfers.ct-demos.com/)
+
+Built using:
+
+- [Vue.js](https://vuejs.org/) 
+- [CarTrawler APIs](https://www.cartrawler.com)
+- [Booostrap](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## Project setup
 ```
