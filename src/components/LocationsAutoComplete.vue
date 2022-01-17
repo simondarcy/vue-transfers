@@ -127,7 +127,6 @@ export default {
         if(typeof location['@ExternalLocId'] != "undefined"){
             let newLocation =  await this.getLocation(location['@ExternalLocId']);
             //Update location with new info
-            console.log("New location ", newLocation)
             location['@Lat'] = newLocation.Result.Lat
             location['@Lng'] = newLocation.Result.Lng
             location['@Name'] = newLocation.Result.LocationName

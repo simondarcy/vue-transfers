@@ -62,7 +62,6 @@ export default {
       let _url = this.$store.getters.availURL;
 
       let searchData = this.$store.getters.searchData;
-      console.log("Search Data", this.$store.getters.searchData)
 
       let _data = {
                 "@Target": this.$store.getters.target,
@@ -125,7 +124,7 @@ export default {
               })
 
               const data = await res.json();
-              console.log("Data from server", data);
+
               this.loading = false;
 
               if(typeof data.Errors === 'object'){
@@ -155,7 +154,6 @@ export default {
                 //!todo provider , info ie "Collection located at customer service desk, outside arrivals hall or your pick-up street address. Your voucher will outline the exact transfer details."
                 //todo travel time 
                 if(serviceObj.service === "Shuttle"){
-                  console.log("Shuttle", service);
                   serviceObj.location = {
                     'Pickup':service.Shuttle.ServiceLocation[0],
                     'Dropoff':service.Shuttle.ServiceLocation[1]
@@ -168,7 +166,6 @@ export default {
                   // serviceObj.info.VehicleSize = service.Shuttle.Vehicle.VehicleSize['#text'];
                   serviceObj.info.VehicleType = (service.Shuttle.Vehicle.Type == "Coach/Bus")?"Bus":service.Shuttle.Vehicle.Type['@Code'];
                 }else if(serviceObj.service === "Service"){
-                    console.log("Service", service);
                     serviceObj.location = service.Service.Location;
                     serviceObj.info.disablity = service.Service['@DisabilityVehicleInd'];
                     serviceObj.info.meet = service.Service['@MeetAndGreetInd'];
