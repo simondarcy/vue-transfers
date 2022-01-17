@@ -19,7 +19,7 @@
         <div class="col-md-6 mb-3">  
           <input type="email" class="form-control" id="passenger-email" v-model="passengerEmail" required placeholder="Email address">
         </div>
-        <div class="col-sm-6 mb-3">  
+        <div class="col-md-6 mb-3">  
           <input type="text" class="form-control" id="passenger-mobile-number" v-model="passengerPhone"  required placeholder="Phone Number">
         </div>
       </div>

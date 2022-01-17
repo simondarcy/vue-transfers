@@ -115,7 +115,6 @@ export default {
     },
     updateReturnDate(date){
       this.returnDate = date;
-      console.log(this)
     },
     updateReturnTime(time){
       this.returnTime = time;
